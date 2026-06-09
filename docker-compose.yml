@@ -19,8 +19,7 @@ services:
       start_period: 60s
 
   flask-app:
-    build:
-      context: .
+    image: myapp
     container_name: myapp
     ports:
       - "5000:5000"
