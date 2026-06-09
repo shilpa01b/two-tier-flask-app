@@ -88,16 +88,22 @@ http://localhost:5000
 
 docker compose down
 
-
 This stops and removes:
 - All containers
 - Networks created by compose
 
 ### 4. Remove Everything (including volume)
 
-```bash
 docker compose down --volumes
-```
+
+## Push image to Docker Hub
+
+The Flask app image is built locally and pushed to Docker Hub as
+'''
+shilpabiswas09/two-tier-app:latest
+'''
+ so it can be pulled and run through Docker Compose on any machine.
+
 ## Notes
 - Use `MYSQL_HOST=mysql` because container names are used for service communication inside the same Docker network.
 - The MySQL container stores data in a volume, so data remains even after container restart.
